@@ -37,4 +37,5 @@ The project was given as a task to be completed in a span of one week and certai
 
 3. For seeing the error logs of the users, first log in and then upon hitting th   e "show logs" button, you will see a json object.  
 
+4. Validation of user inputs while sign up has not been taken care of. The appli   cation will throw exception in case of invalid country-code, phone-number or    country name.  
 
