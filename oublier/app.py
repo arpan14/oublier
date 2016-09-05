@@ -60,12 +60,18 @@ def showTime():
     if _activetime=="--":
         time="Application not running. Please Subscribe"
         return render_template("time.html",time=time)
-    else:
-        _activetime=datetime.strptime(_activetime, "%Y-%m-%d %H:%M:%S.%f")
-
+    
+    _activetime=datetime.strptime(_activetime, "%Y-%m-%d %H:%M:%S.%f")
     diff = datetime.now()-_activetime
-    diff_minutes = (diff.days * 24 * 60) + (diff.seconds/60)
-    time="Application running since "+str(diff_minutes) +" minutes"
+    if diff.days != 0 :
+        time="Application running since "+str(diff.days) +" days"
+    else :    
+        diff_hours = (diff.days * 24) + (diff.seconds/(60*60))
+        if diff_hours !=0:
+            time="Application running since "+str(diff_minutes) +" hours"
+        else :
+            diff_minutes = (diff.days * 24 * 60) + (diff.seconds/60)
+            time="Application running since "+str(diff_minutes) +" minutes"
     return render_template("time.html",time=time)
 
 

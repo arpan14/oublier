@@ -34,13 +34,16 @@ for row in rows:
 	querying for the latitude, longitude of the place using the Country information that we have in our database. 
 	The time of user is obtained and if it is less than the sleep time, we send a message."""
 
-	g = geocoders.GoogleV3()
-	place, (lat, lng) = g.geocode(country)
-	timezone= g.timezone((lat,lng))
-	now=datetime.now(timezone)
+	try:
+		g = geocoders.GoogleV3()
+		place, (lat, lng) = g.geocode(country)
+		timezone= g.timezone((lat,lng))
+		now=datetime.now(timezone)
+	except:
+		now=datetime.now()
+		pass
 	
 	errorTime=str(now)
-	time.sleep(1)
 	
 	hour_minuteTime=now.strftime('%H:%M:%S')
 	print hour_minuteTime
