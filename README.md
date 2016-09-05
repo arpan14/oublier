@@ -2,11 +2,10 @@
 It is a web application created using Flask, HTML/CSS and SQLLite3 which will help in sending reminders to patients suffering from Amnesia. 
 
 The project was given as a task to be completed in a span of one week and certain criterias as the following had to be met :
-1. Create a (basic) web based application where one can set his phone number.
-2. Send an SMS every one hour except at night.
-3. Try resending an SMS if it fails, but retry no more than 5 times. (There is only so much you can do!).
-4. The web application should also log all the failed messages and tell an user for how many hours the application has been running.
-
+1. Create a (basic) web based application where one can set his phone number.  
+2. Send an SMS every one hour except at night.  
+3. Try resending an SMS if it fails, but retry no more than 5 times. (There is only so much you can do!).  
+4. The web application should also log all the failed messages and tell an user for how many hours the application has been running.  
 
 #Setting Up and Usage:
 
@@ -14,7 +13,8 @@ The project was given as a task to be completed in a span of one week and certai
 2. Run the script tabledef.py to generate all required tables.
 
 3. We will set up a couple of cron jobs on our system. A cron jab can be set up on Ubuntu by the following commands.
-	crontab -e
+	**crontab -e**  
+	
 	Append the below line to the file.
 
 	*/2 * * * * /usr/bin/python /home/arpan/gitProjects/oublier/poll_otp.py
