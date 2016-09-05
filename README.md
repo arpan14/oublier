@@ -15,10 +15,9 @@ The project was given as a task to be completed in a span of one week and certai
 3. We will set up a couple of cron jobs on our system. A cron jab can be set up on Ubuntu by the following commands.
 	**crontab -e**  
 	
-	Append the below line to the file. **  
+	Append the below line to the file.   
 
-	*/2 * * * * /usr/bin/python /home/arpan/gitProjects/oublier/poll_otp.py**  
-
+	*/2 * * * * /usr/bin/python /home/arpan/gitProjects/oublier/poll_otp.py  
    This enables us to run the script poll_otp.py every 2 mins.
 
 #Design Considerations
