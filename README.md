@@ -17,9 +17,15 @@ The project was given as a task to be completed in a span of one week and certai
 	
 	Append the below line to the file.
 
-	*/2 * * * * /usr/bin/python /home/arpan/gitProjects/oublier/poll_otp.py
+	** */2 * * * * /usr/bin/python /home/arpan/gitProjects/oublier/poll_otp.py **  
 
    This enables us to run the script poll_otp.py every 2 mins.
+
+#Design Considerations
+1. Since the patient suffers from Amnesia, it will be diffcult for him to remember his phone number. Therefore for log-in we implement a OTP authentication system. This way all the user has to know is his phone number. Once he enters the phone number , we send the OTP which is valid for 40 seconds.   
+
+2. Added feature where user can subscribe or unsubscribe the service at his will. For this he has to login. Once he un-subscribes we stop sending him messages.  
+3. While sending a message and deciding on the sleep time of user, it was important to know his time-zone. We take the most minimal input information i.e the user's country, use Google API to find the timezone. 
 
 #Constraints:
 
