@@ -68,7 +68,7 @@ def showTime():
     else :    
         diff_hours = (diff.days * 24) + (diff.seconds/(60*60))
         if diff_hours !=0:
-            time="Application running since "+str(diff_minutes) +" hours"
+            time="Application running since "+str(diff_hours) +" hours"
         else :
             diff_minutes = (diff.days * 24 * 60) + (diff.seconds/60)
             time="Application running since "+str(diff_minutes) +" minutes"
