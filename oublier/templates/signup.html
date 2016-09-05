@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Reminder App</title>
+
+   
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation"><a href="/showSignIn">Sign In</a></li>
+            <li role="presentation" class="active"><a href="/signUp">Sign Up</a></li>
+          </ul>
+        </navk>
+      </div>
+
+      <div class="jumbotron">
+        {% if error %}
+        <p><strong>Alert:</strong> {{ error }}
+        {% endif %}
+        <h1>Oublier</h1>
+        <form class="form-signin" action="http://localhost:5002/signUp" method="POST">
+          <label for="inputName" class="sr-only">Name</label>
+          <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus><br>
+          <label for="inputCountryCode" class="sr-only">Country Code</label>
+          <input type="number" name="inputCountryCode" id="inputCountryCode" class="form-control" placeholder="Country Code" required autofocus>
+          <label for="inputNumber" class="sr-only">Phone Number</label>
+          <input type="number" name="inputNumber" id="inputNumber" class="form-control" placeholder="Phone Number" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+          <label for="inputCountry" class="sr-only">Country</label>
+          <input type="country" name="inputCountry" id="inputCountry" class="form-control" placeholder="Country" required>   
+          <input type="submit" id="btnSignUp" class="btn btn-lg btn-primary btn-block" value="Sign Up"></button>
+        </form>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
+

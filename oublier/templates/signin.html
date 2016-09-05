@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Reminder App</title>
+
+   
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="/showSignIn">Sign In</a></li>
+            <li role="presentation" ><a href="/showSignUp">Sign Up</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Oublier</h1>
+        <form class="form-signin" action="http://localhost:5002/signIn" method="POST">
+          <label for="inputNumber" class="sr-only">Phone Number</label>
+          <input type="number" name="inputNumber" id="inputNumber" class="form-control" placeholder="Phone Number" required autofocus>
+          <input type="submit" id="btnSignIn" class="btn btn-lg btn-primary btn-block" value="Log In"></button>
+        </form>
+        {% if error %}
+        <p><strong>Alert:</strong> {{ error }}
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
+
